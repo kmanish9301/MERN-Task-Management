@@ -7,6 +7,8 @@ const userSchema = new mongoose.Schema(
         password: String,
         role: { type: String, enum: ['Admin', 'User'], default: 'User' },
         tasks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }],
+        accessToken: { type: String },
+        refreshToken: { type: String },
     },
     {
         timestamps: true,
