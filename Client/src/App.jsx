@@ -1,12 +1,17 @@
-import './App.css'
+import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./Routes/AppRoutes";
+import ToastNotification from "./common/commonComponents/ToastNotification";
 
 function App() {
-
   return (
     <>
-      <h1>Hello world</h1>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+      <ToastNotification />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
